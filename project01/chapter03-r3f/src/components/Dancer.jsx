@@ -27,7 +27,7 @@ export function Dancer(props) {
         });
       }}
       scale={0.01}
-      position-y={0.8}
+      position-y={1.5}
       ref={group}
       {...props}
       dispose={null}
