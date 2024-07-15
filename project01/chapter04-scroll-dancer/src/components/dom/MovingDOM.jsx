@@ -44,37 +44,34 @@ export const MovingDOM = () => {
     <Scroll html>
       <ArticleWrapper ref={article01Ref}>
         <LeftBox>
-          <span>FastCampus InteracTive Web Lecture</span>
-          <span>FastCampus iNteracTive Web Lecture</span>
-          <span>FastCampus inTeracTive Web Lecture</span>
-          <span>FastCampus iNtEracTive Web Lecture</span>
-          <span>FastCampus iNteRacTive Web Lecture</span>
+          <span>Lead Me</span>
+          <span>Lead me</span>
+          <span>Lead Me</span>
+          <span>lead me</span>
+          <span>Lead Me</span>
         </LeftBox>
       </ArticleWrapper>
       <ArticleWrapper ref={article02Ref}>
         <RightBox>
-          <span>FastCampus InteracTive Web Lecture</span>
-          <span>FastCampus iNteracTive Web Lecture</span>
-          <span>FastCampus inTeracTive Web Lecture</span>
-          <span>FastCampus iNtEracTive Web Lecture</span>
-          <span>FastCampus iNteRacTive Web Lecture</span>
+          <span>lead me</span>
+          <span>lead me</span>
+          <span>lead me</span>
+          <span>lead me</span>
         </RightBox>
       </ArticleWrapper>
-      <ArticleWrapper ref={article03Ref}>
-        Threejs R3F Drei Cannon
-      </ArticleWrapper>
+      <ArticleWrapper ref={article03Ref}>Lead me</ArticleWrapper>
       <ArticleWrapper className="height-4" ref={article04Ref}>
         <RightBox className="fixed">
-          <span>FastCampus InteracTive Web Lecture</span>
-          <span>FastCampus iNteracTive Web Lecture</span>
-          <span>FastCampus inTeracTive Web Lecture</span>
-          <span>FastCampus iNtEracTive Web Lecture</span>
-          <span>FastCampus iNteRacTive Web Lecture</span>
+          <span>Lead me</span>
+          <span>Lead me</span>
+          <span>Lead me</span>
+          <span>Lead me</span>
+          <span>Lead me</span>
           4번
         </RightBox>
       </ArticleWrapper>
       <ArticleWrapper ref={article08Ref}>
-        {`You've mastered the basics of R3F.`}
+        {`Lead me`}
         <Footer>
           {`You've mastered the basics of R3F.You've mastered the basics of`}
           {`R3F.You've mastered the basics of R3F.You've mastered the basics of`}

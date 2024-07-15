@@ -5,7 +5,7 @@ Command: npx gltfjsx@6.4.1 public/models/CubeGuyCharacter.glb -o src/components/
 
 import { useGLTF } from "@react-three/drei";
 import { usePlayer } from "./hooks/usePlayer";
-import { NicknameBoard } from "../structures/ground/3dUIs/NicknameBoard";
+import { TextBoard } from "../structures/ground/3dUIs/TextBoard";
 
 export function Player({ player, position, modelIndex: mIdx }) {
   const modelIndex = mIdx ?? player.selectedCharacterGlbNameIndex;
@@ -25,9 +25,9 @@ export function Player({ player, position, modelIndex: mIdx }) {
   return (
     <>
       {me && (
-        <NicknameBoard
+        <TextBoard
           ref={nicknameRef}
-          text={`${player?.nickname}${player?.jobPosition}`}
+          text={`${player?.nickname}[${player?.jobPosition}]`}
         />
       )}
       <group

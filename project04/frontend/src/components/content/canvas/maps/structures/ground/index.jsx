@@ -1,3 +1,4 @@
+import { Cloud, Clouds } from "@react-three/drei";
 import { Floor } from "./elements/Floor";
 import { JungleGym } from "./elements/JungleGym";
 import { Key } from "./elements/Key";
@@ -35,6 +36,29 @@ export const GroundElements = () => {
 
       <Swing />
       <JungleGym />
+
+      <Clouds>
+        <Cloud
+          segments={100}
+          volume={5}
+          scale={2}
+          concentrate="random"
+          opacity={0.5}
+          speed={2}
+          position={[-20, 0, -20]}
+        />
+        <Cloud
+          segments={10}
+          volume={10}
+          scale={2}
+          concentrate="random"
+          opacity={0.5}
+          fade={10}
+          speed={2}
+          position={[20, 0, -20]}
+          color={"skyblue"}
+        />
+      </Clouds>
     </>
   );
 };

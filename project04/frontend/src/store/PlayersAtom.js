@@ -1,6 +1,12 @@
-import { atom } from "recoil";
+import { atom, selector } from "recoil";
 
-// 유저 정보 저장
+// 모든 플레이어들
+export const PlayersAtom = atom({
+  key: "PlayersAtom",
+  default: [],
+});
+
+// 내 socket 정보
 export const MeAtom = atom({
   key: "MeAtom",
   default: undefined,
@@ -18,7 +24,63 @@ export const SelectedCharacterGlbNameIndexAtom = atom({
   default: 0,
 });
 
-export const PlayersAtom = atom({
-  key: "PlayersAtom",
+export const PlayerCompletedQuestAtom = atom({
+  key: "PlayerCompletedQuestAtom",
   default: [],
+});
+
+export const PlayerInventoryAtom = atom({
+  key: "PlayerInventoryAtom",
+  default: [],
+});
+
+export const PlayGroundStructuresBoundingBoxAtom = atom({
+  key: "PlayGroundStructuresBoundingBoxAtom",
+  default: [],
+});
+
+export const PlayerGroundStructuresFloorPlaneCornersSelector = selector({
+  key: "PlayerGroundStructuresFloorPlaneCornersSelector",
+  get: ({ get }) => {
+    const pb = get(PlayGroundStructuresBoundingBoxAtom);
+    return pb.map((item) => {
+      return {
+        name: item.name,
+        corners: [
+          {
+            x: item.box.max.x + item.position.x,
+            z: item.box.max.z + item.position.z,
+          },
+          {
+            x: item.box.max.x + item.position.x,
+            z: item.box.min.z + item.position.z,
+          },
+          {
+            x: item.box.min.x + item.position.x,
+            z: item.box.min.z + item.position.z,
+          },
+          {
+            x: item.box.min.x + item.position.x,
+            z: item.box.max.z + item.position.z,
+          },
+        ],
+        position: item.position,
+      };
+    });
+  },
+});
+
+export const IsLoadCompletedAtom = atom({
+  key: "IsLoadCompletedAtom",
+  default: false,
+});
+
+export const CurrentMapAtom = atom({
+  key: "CurrentMapAtom",
+  default: "GROUND",
+});
+
+export const CurrentMyRoomPlayerAtom = atom({
+  key: "CurrentMyRoomPlayerAtom",
+  default: undefined,
 });

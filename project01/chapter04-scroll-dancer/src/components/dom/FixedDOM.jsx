@@ -3,47 +3,8 @@ import styled from "styled-components";
 export const FixedDOM = () => {
   return (
     <FixedDOMWrapper id="fixed">
-      <span>
-        Interesting Threejs Interesting Threejs Interesting Threejs Interesting
-        Threejs Interesting Threejs Interesting Threejs Interesting Threejs
-        Interesting Threejs Interesting Threejs Interesting Threejs Interesting
-        Threejs Interesting Threejs Interesting Threejs Interesting Threejs
-        Interesting Threejs Interesting Threejs Interesting Threejs Interesting
-        Threejs Interesting Threejs Interesting Threejs Interesting Threejs
-        Interesting Threejs Interesting Threejs Interesting ThreejsInteresting
-        Threejs Interesting Threejs Interesting ThreejsInteresting Threejs
-        Interesting Threejs Interesting ThreejsInteresting Threejs Interesting
-        Threejs Interesting ThreejsInteresting Threejs Interesting Threejs
-        Interesting ThreejsInteresting Threejs Interesting Threejs Interesting
-        ThreejsInteresting Threejs Interesting Threejs Interesting
-        ThreejsInteresting Threejs Interesting Threejs Interesting
-        ThreejsInteresting Threejs Interesting Threejs Interesting
-        ThreejsInteresting Threejs Interesting Threejs Interesting
-        ThreejsInteresting Threejs Interesting Threejs Interesting
-        ThreejsInteresting Threejs Interesting Threejs Interesting Threejs
-        Interesting Threejs Interesting Threejs Interesting Threejs
-      </span>
-      <img src="/threejs.png" alt="threejs-logo"></img>{" "}
-      <span>
-        Interesting Threejs Interesting Threejs Interesting Threejs Interesting
-        Threejs Interesting Threejs Interesting Threejs Interesting Threejs
-        Interesting Threejs Interesting Threejs Interesting Threejs Interesting
-        Threejs Interesting Threejs Interesting Threejs Interesting Threejs
-        Interesting Threejs Interesting Threejs Interesting Threejs Interesting
-        Threejs Interesting Threejs Interesting Threejs Interesting Threejs
-        Interesting Threejs Interesting Threejs Interesting Threejs Interesting
-        Threejs Interesting Threejs Interesting Threejs Threejs Interesting
-        Threejs Interesting Threejs Interesting Threejs Interesting Threejs
-        Interesting Threejs Interesting Threejs Interesting Threejs Interesting
-        Threejs Interesting Threejs Threejs Interesting Threejs Interesting
-        Threejs Threejs Interesting Threejs Interesting Threejs Interesting
-        Threejs Interesting Threejs Interesting Threejs Interesting Threejs
-        Interesting Threejs Interesting Threejs Interesting Threejs Threejs
-        Interesting Threejs Interesting Threejs Threejs Interesting Threejs
-        Interesting Threejs Interesting Threejs Interesting Threejs Interesting
-        Threejs Interesting Threejs Interesting Threejs Interesting Threejs
-        Interesting Threejs
-      </span>
+      <span>Lead Me</span>
+      <img src="/threejs.png" alt="threejs-logo"></img> <span>Lead Me</span>
     </FixedDOMWrapper>
   );
 };

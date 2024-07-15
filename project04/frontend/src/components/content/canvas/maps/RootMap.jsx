@@ -1,20 +1,26 @@
 import { useThree } from "@react-three/fiber";
-import { useEffect, useRef } from "react";
+import { Suspense, useEffect, useRef } from "react";
 import { useRecoilState, useRecoilValue } from "recoil";
 import * as THREE from "three";
 import {
   CharacterSelectFinishedAtom,
+  PlayerGroundStructuresFloorPlaneCornersSelector,
   PlayersAtom,
 } from "../../../../store/PlayersAtom";
 import { CharacterInit } from "../../lobby/CharacterInit";
 import { Player } from "./player/Player";
 import { GroundElements } from "./structures/ground";
+import { Line } from "@react-three/drei";
+import { Loader } from "../../loader/Loader";
 export const RootMap = () => {
   const characterSelectFinished = useRecoilValue(CharacterSelectFinishedAtom);
+  const playGroundStructuresFloorPlaneCorners = useRecoilValue(
+    PlayerGroundStructuresFloorPlaneCornersSelector
+  );
   const [players] = useRecoilState(PlayersAtom);
   const camera = useThree((three) => three.camera);
   const controls = useRef(null);
-  console.log("이거이거", players);
+  console.log("players", players);
   useEffect(() => {
     if (!controls.current) return;
     camera.position.set(14, 14, 14);
@@ -22,12 +28,21 @@ export const RootMap = () => {
   }, [camera.position]);
 
   return (
-    <>
+    <Suspense fallback={<Loader />}>
       {!characterSelectFinished ? (
         <CharacterInit />
       ) : (
         <>
           <GroundElements />
+          {playGroundStructuresFloorPlaneCorners?.map((corner) => {
+            return (
+              <Line
+                key={corner.name}
+                color={"red"}
+                points={corner.corners.map((c) => [c.x, 0.01, c.z])}
+              />
+            );
+          })}
           {players.map((player) => {
             return (
               <Player
@@ -45,6 +60,6 @@ export const RootMap = () => {
           })}
         </>
       )}
-    </>
+    </Suspense>
   );
 };
