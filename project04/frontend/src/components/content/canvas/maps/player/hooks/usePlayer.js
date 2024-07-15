@@ -17,7 +17,6 @@ export const usePlayer = ({ player, position, modelIndex }) => {
   const playerGroundStructuresFloorPlaneCorners = useRecoilValue(
     PlayerGroundStructuresFloorPlaneCornersSelector
   );
-
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const memoizedPosition = useMemo(() => position, []);
   const point = document.getElementById(`player-point-${playerId}`);
@@ -79,6 +78,7 @@ export const usePlayer = ({ player, position, modelIndex }) => {
           ${calculateMinimapPosition(playerRef.current.position).y}px
           )`;
       }
+      a;
 
       setAnimation("CharacterArmature|CharacterArmature|CharacterArmature|Run");
     } else {

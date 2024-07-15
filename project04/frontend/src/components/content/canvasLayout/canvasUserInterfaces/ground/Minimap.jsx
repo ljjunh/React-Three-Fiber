@@ -48,7 +48,6 @@ const PlayerPoint = styled.div`
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background-color: lime;
   &.me-point {
     background-color: red;
   }
