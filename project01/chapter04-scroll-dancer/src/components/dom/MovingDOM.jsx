@@ -44,11 +44,7 @@ export const MovingDOM = () => {
     <Scroll html>
       <ArticleWrapper ref={article01Ref}>
         <LeftBox>
-          <span>Lead Me</span>
-          <span>Lead me</span>
-          <span>Lead Me</span>
-          <span>lead me</span>
-          <span>Lead Me</span>
+          <h1>Lead Me</h1>
         </LeftBox>
       </ArticleWrapper>
       <ArticleWrapper ref={article02Ref}>
@@ -123,6 +119,11 @@ const LeftBox = styled.div`
   }
   & > span:nth-of-type(5) {
     font-size: 28px;
+  }
+  & > h1 {
+    font-family: "Rajdhani";
+    font-size: 80px;
+    margin-left: 40px;
   }
 `;
 
